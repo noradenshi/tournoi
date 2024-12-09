@@ -1,0 +1,26 @@
+header {
+    text-align: center;
+    /* font-size: 500%; */
+    font-size: 6em;
+    font-style: italic;
+    transition-duration: 1s;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 1.35em;
+    color: var(--foreground);
+}
+
+header span {
+    font-weight: lighter;
+    font-size: .25em;
+    vertical-align: text-top;
+    color: var(--accent);
+}
+
+@media screen and (max-width: 580px) {
+    header {
+        font-size: 18vw;
+    }
+}

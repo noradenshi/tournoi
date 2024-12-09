@@ -1,0 +1,19 @@
+.standings {
+    margin-top: .5em;
+    background-color: var(--accent);
+    color: var(--background);
+    border-radius: .75em;
+    width: 100%;
+}
+
+.standings td {
+    padding: .5em;
+}
+
+.standings tbody td {
+    border-top: 1px solid var(--background);
+    padding-left: 1em;
+    padding-top: .25em;
+    text-align: left;
+    vertical-align: center;
+}

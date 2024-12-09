@@ -1,0 +1,45 @@
+.bracket {
+    display: flex;
+    justify-content: center;
+}
+
+.bracket .stage+.stage {
+    margin-top: 2em;
+    margin-left: 1.5em;
+}
+
+.matchup {
+    margin-top: .5em;
+    background-color: var(--accent);
+    color: var(--background);
+    border-radius: .75em;
+}
+
+.matchup td {
+    padding: .25em;
+}
+.matchup td.seed {
+    padding-left: .5em;
+    padding-right: .5em;
+    width: 1em;
+    border-right: 1px solid var(--primary);
+}
+.matchup td.name {
+    padding-left: .5em;
+    width: 5em;
+    border-right: 1px solid var(--primary);
+}
+.matchup td.score {
+    padding-left: .5em;
+    padding-right: .5em;
+    width: 1em;
+    border-left: 1px solid var(--primary);
+}
+
+.team1 {
+    border-bottom: 1px solid var(--primary);
+}
+
+.team2 {
+    border-top: 1px solid var(--primary);
+}

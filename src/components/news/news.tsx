@@ -17,7 +17,7 @@ function Article({ title, message, date }: ArticleProps) {
 
 export default function News() {
     return (
-        <div className="box">
+        <div id="news" className="box">
             <h1>News</h1>
             <div className="news">
                 <Article title="Grande Finale"

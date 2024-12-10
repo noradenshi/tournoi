@@ -14,7 +14,7 @@ export default function Standings(teams: TeamProps[]) {
                     </tr>
                 </thead>
                 <tbody>
-                    {teams.map((team) => (
+                    {teams.map((team, _) => (
                         <tr>
                             <td>{team.seed + 1}</td>
                             <td>{team.name}</td>

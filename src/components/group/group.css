@@ -1,0 +1,28 @@
+.group {
+    margin-top: .5em;
+    background-color: var(--accent);
+    color: var(--background);
+    border-radius: .75em;
+    width: 100%;
+}
+
+.group td {
+    padding: .25em;
+    text-align: left;
+}
+
+.group thead td {
+    font-weight: bold;
+}
+
+.group tbody td {
+    border-top: 1px solid var(--background);
+}
+
+.group td.name {
+    width: 10em;
+}
+
+.group .points  {
+    text-align: right;
+}

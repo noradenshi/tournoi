@@ -1,9 +1,10 @@
 import Header from "@/components/header/header";
 import Bracket from "@/components/bracket/bracket";
 import Footer from "@/components/footer/footer";
-import Standings from "@/components/standings/standings";
 import TeamProps from "@/interfaces/TeamProps";
 import News from "@/components/news/news";
+import Group from "@/components/group/group";
+import ScrollTopButton from "@/components/scrollTop/scrollTop";
 
 export default function Home() {
     const team_names = [
@@ -14,21 +15,31 @@ export default function Home() {
     ];
 
     const teams: TeamProps[] = team_names.map((name, seed) => ({
-        seed, name, wins: 1, loses: 1,
+        seed, name, wins: 1, loses: 1, group_pts: 3
     }));
+
 
     return (
         <div>
             <Header />
+            <nav>
+                <ul>
+                    <li><a href="#bracket">Bracket</a></li>
+                    <li><a href="#groups">Groups</a></li>
+                    <li><a href="#news">News</a></li>
+                </ul>
+            </nav>
             <div className="content-wrap">
-                <div className="content-2">
-                    {Bracket(teams)}
-                    <News />
+                {Bracket(teams)}
+                <div className="groups">
+                    {Group("A", teams.slice(0, 4))}
+                    {Group("B", teams.slice(4, 8))}
+                    {Group("C", teams.slice(8, 12))}
+                    {Group("D", teams.slice(12, 16))}
                 </div>
-                <div className="content-1">
-                    {Standings(teams)}
-                </div>
+                <News />
             </div>
+            <ScrollTopButton />
             <Footer />
         </div>
     );

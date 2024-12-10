@@ -1,11 +1,16 @@
 .bracket {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap-reverse;
     justify-content: center;
+    gap: 2em 2em;
+    margin: auto 10vw;
 }
 
-.bracket .stage+.stage {
-    margin-top: 2em;
-    margin-left: 1.5em;
+.stage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .matchup {

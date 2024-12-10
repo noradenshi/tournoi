@@ -10,7 +10,7 @@ export default function Standings(teams: TeamProps[]) {
                     <tr>
                         <td>Lp</td>
                         <td>Name</td>
-                        <td>Record</td>
+                        <td className="record">Record</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -18,7 +18,7 @@ export default function Standings(teams: TeamProps[]) {
                         <tr>
                             <td>{team.seed + 1}</td>
                             <td>{team.name}</td>
-                            <td>{team.wins}-{team.loses}</td>
+                            <td className="record">{team.wins}-{team.loses}</td>
                         </tr>
                     ))}
                 </tbody>

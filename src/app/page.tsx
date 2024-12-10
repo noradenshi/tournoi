@@ -6,7 +6,13 @@ import TeamProps from "@/interfaces/TeamProps";
 import News from "@/components/news/news";
 
 export default function Home() {
-    const team_names = ["alpha", "beta", "omega", "sigma"];
+    const team_names = [
+        "Thunderstrikers", "Iron Titans", "Blazing Falcons", "Shadow Panthers",
+        "Silver Sparks", "Crimson Hawks", "Golden Gladiators", "Eclipse Warriors",
+        "Storm Chasers", "Phantom Wolves", "Frost Blades", "Night Vortex",
+        "Savage Predators", "Electric Pioneers", "Inferno Knights", "Mystic Raiders"
+    ];
+
     const teams: TeamProps[] = team_names.map((name, seed) => ({
         seed, name, wins: 1, loses: 1,
     }));
@@ -15,12 +21,12 @@ export default function Home() {
         <div>
             <Header />
             <div className="content-wrap">
-                <div className="content sidebyside">
+                <div className="content-2">
                     {Bracket(teams)}
-                    {Standings(teams)}
-                </div>
-                <div className="content">
                     <News />
+                </div>
+                <div className="content-1">
+                    {Standings(teams)}
                 </div>
             </div>
             <Footer />

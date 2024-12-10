@@ -8,12 +8,20 @@
 
 .standings td {
     padding: .5em;
+    text-align: left;
+    vertical-align: center;
+}
+
+.standings thead td {
+    font-weight: bold;
 }
 
 .standings tbody td {
     border-top: 1px solid var(--background);
     padding-left: 1em;
     padding-top: .25em;
-    text-align: left;
-    vertical-align: center;
+}
+
+.standings .record {
+    text-align: center;
 }

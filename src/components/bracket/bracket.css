@@ -16,23 +16,18 @@
 }
 
 .matchup td {
-    padding: .25em;
+    padding: .25em .5em;
 }
 .matchup td.seed {
-    padding-left: .5em;
-    padding-right: .5em;
-    width: 1em;
+    width: auto;
     border-right: 1px solid var(--primary);
 }
 .matchup td.name {
-    padding-left: .5em;
-    width: 5em;
+    width: 10em;
     border-right: 1px solid var(--primary);
 }
 .matchup td.score {
-    padding-left: .5em;
-    padding-right: .5em;
-    width: 1em;
+    width: auto;
     border-left: 1px solid var(--primary);
 }
 

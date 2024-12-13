@@ -15,7 +15,7 @@ export default function Group(name: string, teams: TeamProps[]) {
                 </thead>
                 <tbody>
                     {teams.map((team, index) => (
-                        <tr>
+                        <tr key={index}>
                             <td>{index + 1}</td>
                             <td className="name">{team.name}</td>
                             <td className="points">{(3 - index) * 3}</td>

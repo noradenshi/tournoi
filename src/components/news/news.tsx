@@ -1,10 +1,6 @@
+import ArticleProps from "@/interfaces/ArticleProps";
 import "./news.css"
-
-interface ArticleProps {
-    title: string;
-    message: string;
-    date: string;
-}
+import { news_articles } from "@/data/news";
 
 function Article({ title, message, date }: ArticleProps) {
     return (
@@ -20,18 +16,7 @@ export default function News() {
         <div id="news" className="box">
             <h1>News</h1>
             <div className="news">
-                <Article title="Grande Finale"
-                    date="22.11.2024"
-                    message="is just around the corner!"
-                />
-                <Article title="First stage over!"
-                    date="15.11.2024"
-                    message="Let's summarize what we've seen so far..."
-                />
-                <Article title="And so it begins..."
-                    date="1.11.2024"
-                    message="The long-awaited leTournoi just started!"
-                />
+                {news_articles.map((v) => <>{Article(v)}</>)}
             </div>
         </div>
     );

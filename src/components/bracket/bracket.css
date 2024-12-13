@@ -2,19 +2,21 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap-reverse;
-    justify-content: center;
-    gap: 2em 2em;
-    margin: auto 10vw;
+    justify-content: space-around;
+    align-content: space-around;
+    width: auto;
+    margin: auto 3vw;
 }
 
 .stage {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: auto;
 }
 
 .matchup {
-    margin-top: .5em;
+    margin: .5em;
     background-color: var(--accent);
     color: var(--background);
     border-radius: .75em;

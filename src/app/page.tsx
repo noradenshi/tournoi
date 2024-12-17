@@ -1,15 +1,11 @@
-import Header from "@/components/header/header";
 import Bracket from "@/components/bracket/bracket";
-import Footer from "@/components/footer/footer";
 import News from "@/components/news/news";
 import Group from "@/components/group/group";
-import ScrollTopButton from "@/components/scrollTop/scrollTop";
 import { teams } from "@/data/teams";
 
 export default function Home() {
     return (
         <div>
-            <Header />
             <nav>
                 <ul>
                     <li><a href="#bracket">Bracket</a></li>
@@ -27,8 +23,6 @@ export default function Home() {
                 </div>
                 <News />
             </div>
-            <ScrollTopButton />
-            <Footer />
         </div>
     );
 }

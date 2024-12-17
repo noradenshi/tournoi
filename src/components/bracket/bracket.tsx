@@ -12,11 +12,11 @@ function Matchup({ team1, team2, score1, score2 }: MatchupProps) {
     return (
         <table className="matchup">
             <tbody>
-                <tr className="team1">
+                <tr className="team1" style={{ fontStyle: score1 > score2 ? "italic" : "normal" }}>
                     <td className="name">{team1.name}</td>
                     <td className="score">{score1}</td>
                 </tr>
-                <tr className="team2">
+                <tr className="team2" style={{ fontStyle: score1 < score2 ? "italic" : "normal" }}>
                     <td className="name">{team2.name}</td>
                     <td className="score">{score2}</td>
                 </tr>
@@ -33,25 +33,25 @@ export default function Bracket(teams: TeamProps[]) {
                 <div className="stage">
                     <label>
                         Quarter-Finals
-                        <Matchup team1={teams[0]} team2={teams[1]} score1={1} score2={0} />
-                        <Matchup team1={teams[4]} team2={teams[5]} score1={1} score2={0} />
-                        <Matchup team1={teams[8]} team2={teams[9]} score1={1} score2={0} />
-                        <Matchup team1={teams[12]} team2={teams[13]} score1={1} score2={0} />
+                        <Matchup team1={teams[0]} team2={teams[5]} score1={2} score2={0} />
+                        <Matchup team1={teams[8]} team2={teams[13]} score1={1} score2={2} />
+                        <Matchup team1={teams[4]} team2={teams[1]} score1={3} score2={0} />
+                        <Matchup team1={teams[12]} team2={teams[9]} score1={0} score2={1} />
                     </label>
                 </div>
 
                 <div className="stage">
                     <label>
                         Semi-Finals
-                        <Matchup team1={teams[0]} team2={teams[4]} score1={2} score2={1} />
-                        <Matchup team1={teams[8]} team2={teams[12]} score1={2} score2={1} />
+                        <Matchup team1={teams[0]} team2={teams[13]} score1={1} score2={2} />
+                        <Matchup team1={teams[4]} team2={teams[9]} score1={3} score2={1} />
                     </label>
                 </div>
 
                 <div className="stage">
                     <label>
                         Final
-                        <Matchup team1={teams[0]} team2={teams[8]} score1={2} score2={0} />
+                        <Matchup team1={teams[13]} team2={teams[4]} score1={1} score2={2} />
                     </label>
                 </div>
             </div>
